@@ -1,0 +1,111 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - SkillSwap</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-link"><img src="logo.png" alt="SkillSwap Logo" class="logo-img"> SkillSwap</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#browse">Browse</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="signup.html" class="btn btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="chat-page">
+        <div class="container">
+            <div class="chat-container">
+                <header class="chat-header">
+                    <img src="card-yoga.png" alt="Kenji Tanaka" class="profile-avatar-sm">
+                    <div class="chat-header-details">
+                        <p class="username">Kenji Tanaka</p>
+                        <p class="skill-info">Regarding: Yoga & Mindfulness</p>
+                    </div>
+                    <a href="#" class="btn btn-primary">Confirm Swap</a>
+                </header>
+                <div class="chat-messages">
+                    <div class="message received">
+                         <div class="message-bubble">
+                            Hey! Saw you were interested in my Yoga & Mindfulness sessions. Happy to chat about it.
+                        </div>
+                    </div>
+                     <div class="message sent">
+                         <div class="message-bubble">
+                            Hi Kenji! Yes, definitely. I saw your profile, looks great. I'm hoping to learn some basics to help with stress.
+                        </div>
+                    </div>
+                     <div class="message received">
+                         <div class="message-bubble">
+                            That's a perfect reason to start. We can begin with some simple breathing exercises and poses. What skill are you offering to swap?
+                        </div>
+                    </div>
+                     <div class="message sent">
+                         <div class="message-bubble">
+                            I'm a web developer. I can help you build a professional portfolio website for your yoga practice!
+                        </div>
+                    </div>
+                     <div class="message received">
+                         <div class="message-bubble">
+                            Wow, that sounds amazing! That's a deal. When are you free to start?
+                        </div>
+                    </div>
+                </div>
+                <div class="message-input-area">
+                    <form class="message-input-form">
+                        <input type="text" placeholder="Type your message...">
+                        <button type="submit" class="btn btn-signup">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h4 class="logo-link"><img src="logo.png" alt="SkillSwap Logo" class="logo-img-footer"> SkillSwap</h4>
+                <p>Swap your skills, expand your horizons. Join our community and grow with us.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#">FB</a>
+                    <a href="#">TW</a>
+                    <a href="#">LI</a>
+                    <a href="#">IG</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 SkillSwap. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

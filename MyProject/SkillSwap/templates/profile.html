@@ -1,0 +1,159 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - SkillSwap</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-link"><img src="logo.png" alt="SkillSwap Logo" class="logo-img"> SkillSwap</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#browse">Browse</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="signup.html" class="btn btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="profile-page">
+        <div class="container">
+            <header class="profile-header">
+                <img src="user-avatar.png" alt="User Avatar" class="profile-avatar-lg">
+                <div class="profile-info">
+                    <h1>Alex Johnson</h1>
+                    <p class="username">@alexj</p>
+                    <p class="bio">Full-stack developer with a passion for teaching and learning. I love creating beautiful, functional websites and exploring the world of AI. Let's connect and swap skills!</p>
+                    <div class="profile-actions">
+                        <a href="#" class="btn btn-primary">Edit Profile</a>
+                        <a href="#" class="btn btn-secondary">Manage Swaps</a>
+                    </div>
+                </div>
+            </header>
+
+            <section class="profile-skills">
+                <div class="profile-tabs">
+                    <button class="tab-btn active" data-tab="offered">Skills Offered</button>
+                    <button class="tab-btn" data-tab="wanted">Skills Wanted</button>
+                </div>
+
+                <div id="offered" class="tab-content active">
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <img src="card-webdev.png" alt="Web Development" class="card-img">
+                            <div class="card-content">
+                                <span class="card-category tech">Tech</span>
+                                <h3 class="card-title">Modern Web Development</h3>
+                                <p class="card-user">by Alex Johnson</p>
+                                <div class="card-rating">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="rating-text">4.8 (82)</span>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="skill-card">
+                            <img src="card-speaking.png" alt="Public Speaking" class="card-img">
+                            <div class="card-content">
+                                <span class="card-category business">Business</span>
+                                <h3 class="card-title">Public Speaking</h3>
+                                <p class="card-user">by Alex Johnson</p>
+                                <div class="card-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="rating-text">4.9 (150)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="wanted" class="tab-content">
+                    <div class="skills-grid">
+                       <div class="skill-card">
+                            <img src="card-illustration.png" alt="Digital Illustration" class="card-img">
+                            <div class="card-content">
+                                <span class="card-category creative">Creative</span>
+                                <h3 class="card-title">Digital Illustration</h3>
+                                <p class="card-user">Looking to learn from an expert!</p>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <img src="card-guitar.png" alt="Guitar Lessons" class="card-img">
+                            <div class="card-content">
+                                <span class="card-category creative">Creative</span>
+                                <h3 class="card-title">Beginner Guitar Lessons</h3>
+                                 <p class="card-user">Ready to start my rockstar journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h4 class="logo-link"><img src="logo.png" alt="SkillSwap Logo" class="logo-img-footer"> SkillSwap</h4>
+                <p>Swap your skills, expand your horizons. Join our community and grow with us.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#">FB</a>
+                    <a href="#">TW</a>
+                    <a href="#">LI</a>
+                    <a href="#">IG</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 SkillSwap. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const tabId = button.dataset.tab;
+                    tabContents.forEach(content => {
+                        if (content.id === tabId) {
+                            content.classList.add('active');
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

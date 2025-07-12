@@ -1,0 +1,103 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SkillSwap</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="{url 'index'}" class="logo-link"><img src="{% static 'images/logo.png' %}" alt="SkillSwap Logo" class="logo-img"> SkillSwap</a>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'index' %}#browse">Browse</a></li>
+                    <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="{% url 'login' %}" class="btn btn-login">Login</a>
+                <a href="{% url 'signup' %}" class="btn btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <div class="auth-container">
+             <div class="auth-image-side">
+                <img src="{% static 'images/hero-image.png' %}" alt="People exchanging skills">
+            </div>
+            <div class="auth-box">
+                <h2>Join SkillSwap Today!</h2>
+                <p>Start your journey of learning and sharing.</p>
+                <form>
+                     <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" required placeholder="Alex Johnson">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" name="password" required placeholder="Create a password">
+                            <span class="password-toggle" data-for="password">👁️</span>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+                             <span class="password-toggle" data-for="confirm-password">👁️</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary auth-btn">Create Account</button>
+                </form>
+                <div class="auth-switch">
+                    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h4 class="logo-link"><img src="{% static 'images/logo.png' %}" alt="SkillSwap Logo" class="logo-img-footer"> SkillSwap</h4>
+                <p>Swap your skills, expand your horizons. Join our community and grow with us.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#">FB</a>
+                    <a href="#">TW</a>
+                    <a href="#">LI</a>
+                    <a href="#">IG</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 SkillSwap. All rights reserved.</p>
+        </div>
+    </footer>
+     <script src="{% static 'js/auth.js' %}"></script>
+</body>
+</html>

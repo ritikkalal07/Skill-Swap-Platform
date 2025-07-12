@@ -1,0 +1,160 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SkillSwap</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-link"><img src="logo.png" alt="SkillSwap Logo" class="logo-img"> SkillSwap</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#browse">Browse</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                 <a href="profile.html" class="profile-link">
+                    <img src="user-avatar.png" alt="User Avatar" class="profile-avatar-sm">
+                </a>
+                <a href="index.html" class="btn btn-login">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-page">
+        <div class="container">
+            <header class="dashboard-header">
+                <h1>Welcome back, Alex!</h1>
+                <p>Here's a summary of your SkillSwap activity.</p>
+            </header>
+
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="actions-grid">
+                    <a href="profile.html" class="action-card">
+                        <img src="icon-profile.png" alt="Profile Icon">
+                        <h3>Manage Profile</h3>
+                        <p>Update your bio, skills, and settings.</p>
+                    </a>
+                    <a href="#" class="action-card">
+                        <img src="icon-add.png" alt="Add Skill Icon">
+                        <h3>Offer a New Skill</h3>
+                        <p>Share more of your expertise with the community.</p>
+                    </a>
+                    <a href="index.html#browse" class="action-card">
+                        <img src="icon-browse.png" alt="Browse Icon">
+                        <h3>Browse Skills</h3>
+                        <p>Discover new skills and connect with experts.</p>
+                    </a>
+                </div>
+            </section>
+
+            <div class="dashboard-columns">
+                <section class="upcoming-swaps">
+                    <h2>Upcoming Swaps</h2>
+                    <div class="swap-list">
+                        <div class="swap-item">
+                            <div class="swap-item-skill">
+                                <img src="card-guitar.png" class="swap-skill-img" alt="Guitar">
+                                <div>
+                                    <h4>Beginner Guitar Lessons</h4>
+                                    <p>with <a href="#">Chloe Bennett</a></p>
+                                </div>
+                            </div>
+                            <div class="swap-item-details">
+                                <p><strong>Date:</strong> Oct 28, 2024</p>
+                                <a href="chat.html" class="btn btn-secondary btn-sm">View Chat</a>
+                            </div>
+                        </div>
+                         <div class="swap-item">
+                            <div class="swap-item-skill">
+                                <img src="card-yoga.png" class="swap-skill-img" alt="Yoga">
+                                <div>
+                                    <h4>Yoga & Mindfulness</h4>
+                                    <p>with <a href="#">Kenji Tanaka</a></p>
+                                </div>
+                            </div>
+                            <div class="swap-item-details">
+                                <p><strong>Date:</strong> Nov 04, 2024</p>
+                                <a href="chat.html" class="btn btn-secondary btn-sm">View Chat</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="pending-requests">
+                    <h2>Pending Requests (2)</h2>
+                    <div class="request-list">
+                        <div class="request-item">
+                             <div class="request-item-user">
+                                <img src="user-avatar-2.png" class="profile-avatar-sm" alt="Samantha Lee">
+                                <div>
+                                    <h4>Samantha Lee</h4>
+                                    <p>for <strong>Modern Web Dev</strong></p>
+                                </div>
+                            </div>
+                            <div class="request-item-actions">
+                                <a href="chat.html" class="btn btn-signup btn-sm">Accept</a>
+                                <a href="#" class="btn btn-login btn-sm">Decline</a>
+                            </div>
+                        </div>
+                         <div class="request-item">
+                             <div class="request-item-user">
+                                <img src="user-avatar-3.png" class="profile-avatar-sm" alt="David Chen">
+                                <div>
+                                    <h4>David Chen</h4>
+                                    <p>for <strong>Public Speaking</strong></p>
+                                </div>
+                            </div>
+                            <div class="request-item-actions">
+                                <a href="chat.html" class="btn btn-signup btn-sm">Accept</a>
+                                <a href="#" class="btn btn-login btn-sm">Decline</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h4 class="logo-link"><img src="logo.png" alt="SkillSwap Logo" class="logo-img-footer"> SkillSwap</h4>
+                <p>Swap your skills, expand your horizons. Join our community and grow with us.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#">FB</a>
+                    <a href="#">TW</a>
+                    <a href="#">LI</a>
+                    <a href="#">IG</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 SkillSwap. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

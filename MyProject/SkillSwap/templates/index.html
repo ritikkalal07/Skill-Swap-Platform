@@ -1,0 +1,194 @@
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Swap - Swap Skills. Grow Together.</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo-link"><img src="{% static 'images/logo.png' %}" alt="SkillSwap Logo" class="logo-img"> SkillSwap</a>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="#browse">Browse</a></li>
+                    <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="{% url 'login' %}" class="btn btn-login">Login</a>
+                <a href="{% url 'signup' %}" class="btn btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1>Swap Skills. Grow Together.</h1>
+                    <p>Join a community of learners and experts. Exchange your knowledge, learn new skills, and unlock your potential without spending a dime.</p>
+                    <div class="hero-buttons">
+                        <a href="{% url 'signup' %}" class="btn btn-primary">Sign Up</a>
+                        <a href="#browse" class="btn btn-secondary">Browse Skills</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="{% static 'images/hero-image.png' %}" alt="People exchanging skills">
+                </div>
+            </div>
+        </section>
+
+        <section id="browse" class="browse-section">
+            <div class="container">
+                <h2>Explore Skills</h2>
+                <p class="browse-subtitle">Find the perfect skill to learn from our talented community.</p>
+
+                <div class="filter-bar">
+                    <div class="search-wrapper">
+                        <input type="search" id="search-bar" placeholder="Search for skills...">
+                    </div>
+                    <div class="select-wrapper">
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="tech">Tech</option>
+                            <option value="creative">Creative</option>
+                            <option value="lifestyle">Lifestyle</option>
+                            <option value="business">Business</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="skills-grid" id="skills-grid">
+                    <div class="skill-card" data-title="Modern Web Development" data-category="tech">
+                        <img src="{% static 'images/card-webdev.png' %}" alt="Web Development" class="card-img">
+                        <div class="card-content">
+                            <span class="card-category tech">Tech</span>
+                            <h3 class="card-title">Modern Web Development</h3>
+                            <p class="card-user">by <a href="{% url 'profile' %}">Alex Johnson</a></p>
+                            <div class="card-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-text">4.8 (82)</span>
+                            </div>
+                            <a href="" class="btn btn-swap">Request Swap</a>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-title="Digital Illustration" data-category="creative">
+                        <img src="{% static 'images/card-illustration.png' %}" alt="Digital Illustration" class="card-img">
+                        <div class="card-content">
+                            <span class="card-category creative">Creative</span>
+                            <h3 class="card-title">Digital Illustration</h3>
+                            <p class="card-user">by <a href="{% url 'profile' %}">Samantha Lee</a></p>
+                            <div class="card-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-text">5.0 (120)</span>
+                            </div>
+                            <a href="chat.html" class="btn btn-swap">Request Swap</a>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-title="Yoga and Mindfulness" data-category="lifestyle">
+                        <img src="{% static 'images/card-yoga.png' %}" alt="Yoga" class="card-img">
+                        <div class="card-content">
+                            <span class="card-category lifestyle">Lifestyle</span>
+                            <h3 class="card-title">Yoga & Mindfulness</h3>
+                            <p class="card-user">by <a href="{% url 'profile' %}">Kenji Tanaka</a></p>
+                            <div class="card-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-text">4.9 (95)</span>
+                            </div>
+                            <a href="chat.html" class="btn btn-swap">Request Swap</a>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-title="Financial Planning Basics" data-category="business">
+                        <img src="{% static 'images/card-finance.png' %}" alt="Financial Planning" class="card-img">
+                        <div class="card-content">
+                            <span class="card-category business">Business</span>
+                            <h3 class="card-title">Financial Planning Basics</h3>
+                            <p class="card-user">by <a href="{% url 'profile' %}">Maria Garcia</a></p>
+                            <div class="card-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-text">4.7 (68)</span>
+                            </div>
+                            <a href="chat.html" class="btn btn-swap">Request Swap</a>
+                        </div>
+                    </div>
+
+                     <div class="skill-card" data-title="Public Speaking Confidence" data-category="business">
+                        <img src="{% static 'images/card-speaking.png' %}" alt="Public Speaking" class="card-img">
+                        <div class="card-content">
+                            <span class="card-category business">Business</span>
+                            <h3 class="card-title">Public Speaking</h3>
+                            <p class="card-user">by <a href="{% url 'profile' %}">David Chen</a></p>
+                            <div class="card-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-text">4.9 (150)</span>
+                            </div>
+                            <a href="chat.html" class="btn btn-swap">Request Swap</a>
+                        </div>
+                    </div>
+
+                     <div class="skill-card" data-title="Beginner Guitar Lessons" data-category="creative">
+                        <img src="{% static 'images/card-guitar.png' %}" alt="Guitar Lessons" class="card-img">
+                        <div class="card-content">
+                            <span class="card-category creative">Creative</span>
+                            <h3 class="card-title">Beginner Guitar Lessons</h3>
+                            <p class="card-user">by <a href="{% url 'profile' %}">Chloe Bennett</a></p>
+                            <div class="card-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-text">4.8 (112)</span>
+                            </div>
+                            <a href="#" class="btn btn-swap">Request Swap</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="no-results" class="no-results-message" style="display: none;">
+                    <h3>No Skills Found</h3>
+                    <p>Try adjusting your search or filter settings.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h4 class="logo-link"><img src="{% static 'images/logo.png' %}" alt="SkillSwap Logo" class="logo-img-footer"> SkillSwap</h4>
+                <p>Swap your skills, expand your horizons. Join our community and grow with us.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <!-- Using text placeholders for icons -->
+                    <a href="#">FB</a>
+                    <a href="#">TW</a>
+                    <a href="#">LI</a>
+                    <a href="#">IG</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 SkillSwap. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
